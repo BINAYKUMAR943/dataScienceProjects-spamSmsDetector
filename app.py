@@ -56,9 +56,10 @@ if st.button('Predict'):
     #Lemmetize
     lemmetize(sms)
     #Vectorize
-    sms=tfidf(sms).toarray()
+    sms=tfidf.transform([sms]).toarray()
     #Predict
     sms_type_nbr=model.predict(sms)
     #GetType
-    sms_type_txt=le.inverse_transform(sm_type)
+    sms_type_txt=le.inverse_transform(sms_type_nbr)
+    print(sms_type_txt)
     st.header(sms_type_txt)
