@@ -4,3 +4,4 @@ stem
 corpus
 WordNetLemmatizer
 punkt
+all

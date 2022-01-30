@@ -1,9 +1,7 @@
 import re
-import nltk
 from nltk.stem import WordNetLemmatizer
 from nltk import word_tokenize
 from nltk.corpus import stopwords
-from nltk import word_tokenize
 import string
 import streamlit as st
 import pickle
