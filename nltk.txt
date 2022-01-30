@@ -1,7 +1,7 @@
 stopwords
+toknize
 word_tokenize
 stem
 corpus
 WordNetLemmatizer
 punkt
-all
