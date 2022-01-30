@@ -33,7 +33,7 @@ def cleanDocument(document):
 
 # Function for lemmetization
 def lemmetize(document): 
-    ''' This function does lemmetizaton of doucument'''
+    ''' This function does lemmetizaton of document'''
     lem=WordNetLemmatizer()
     tokens=word_tokenize(document)
     for i in range(len(tokens)):
