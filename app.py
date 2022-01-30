@@ -1,6 +1,7 @@
 import re
 from nltk.stem import WordNetLemmatizer
-from nltk import word_tokenize
+# from nltk import word_tokenize
+from gensim.utils import tokenize
 from nltk.corpus import stopwords
 import string
 import streamlit as st
@@ -25,7 +26,8 @@ def cleanDocument(document):
     #Removing Stop words
     selected_words=[]
     stop_words=list(stopwords.words("english"))
-    tokens=word_tokenize(document)
+    # tokens=word_tokenize(document)
+    tokens=list(tokenize(document))
     for i in range(len(tokens)):
         if tokens[i] not in stop_words:
             selected_words.append(tokens[i])    
@@ -35,7 +37,8 @@ def cleanDocument(document):
 def lemmetize(document): 
     ''' This function does lemmetizaton of document'''
     lem=WordNetLemmatizer()
-    tokens=word_tokenize(document)
+    # tokens=word_tokenize(document)
+    tokens=list(tokenize(document))
     for i in range(len(tokens)):
         lem_word=lem.lemmatize(tokens[i])
         tokens[i]=lem_word
