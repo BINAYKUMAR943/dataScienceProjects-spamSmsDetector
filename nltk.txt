@@ -1,5 +1,5 @@
 stopwords
-toknize
+tokenize
 word_tokenize
 stem
 corpus
